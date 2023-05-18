@@ -108,6 +108,15 @@ main .bottom-text {
   color: #FFFFFF;
 }
 
+.order {
+  background: url(/assets/background.png) no-repeat;
+  background-size: 1440px;
+}
+
+.order .container {
+  max-width: 942px;
+}
+
 @media (max-width: 1200px) {
   main .leftContent {
     padding-left: 5%;
