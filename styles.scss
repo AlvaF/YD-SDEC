@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    font-family: 'Roboto';
+    line-height: 100%;
+
+    .container {
+        max-width: 1460px;
+        margin: 0 auto;
+    }
+
+    .leftContent {
+        margin-left: 1.5%;
+    }
+
+    .rightContent {
+        background: #168346;
+
+        h3 {
+            margin-top: 15%;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+
+        .container {
+            max-width: 79.5%;
+            margin-left: 7.7%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text {
+            margin-top: 5.5%;
+            max-width: 79%;
+            line-height: 114%;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #FFFFFF;
+
+
+        }
+
+        form {
+            margin-top: 4%;
+            display: flex;
+            flex-direction: column;
+            width: 89.5%;
+
+            input {
+                padding-top: 18px;
+                padding-left: 24px;
+                padding-bottom: 18px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1rem;
+
+                &:not(:first-child) {
+                    margin-top: 3%;
+                }
+            }
+
+            button {
+                border: none;
+                padding: 5% 34%;
+                margin-top: 3%;
+                background: #183E28;
+                color: #FFFFFF;
+                cursor: pointer;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 0.9rem;
+            }
+        }
+
+        .bottom {
+            max-width: 100%;
+            margin-top: 3.9%;
+        }
+    }
+
+    .registration {
+        display: flex;
+    }
+
+    .bottom-text {
+        margin-top: 25%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.81rem;
+        color: #FFFFFF;
+    }
+}

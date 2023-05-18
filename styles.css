@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: 'Roboto';
+  line-height: 100%;
+}
+
+main .container {
+  max-width: 1460px;
+  margin: 0 auto;
+}
+
+main .leftContent {
+  margin-left: 1.5%;
+}
+
+main .rightContent {
+  background: #168346;
+}
+
+main .rightContent h3 {
+  margin-top: 15%;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+main .rightContent .container {
+  max-width: 79.5%;
+  margin-left: 7.7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .rightContent .text {
+  margin-top: 5.5%;
+  max-width: 79%;
+  line-height: 114%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+main .rightContent form {
+  margin-top: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 89.5%;
+}
+
+main .rightContent form input {
+  padding-top: 18px;
+  padding-left: 24px;
+  padding-bottom: 18px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+main .rightContent form input:not(:first-child) {
+  margin-top: 3%;
+}
+
+main .rightContent form button {
+  border: none;
+  padding: 5% 34%;
+  margin-top: 3%;
+  background: #183E28;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+main .rightContent .bottom {
+  max-width: 100%;
+  margin-top: 3.9%;
+}
+
+main .registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .bottom-text {
+  margin-top: 25%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.81rem;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=styles.css.map */
