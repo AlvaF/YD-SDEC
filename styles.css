@@ -303,11 +303,44 @@ main .bottom-text {
     max-width: 653px;
   }
   .order .container .content h3 {
+    line-height: 2.37rem;
     text-align: center;
     padding-top: 5%;
   }
   .order .container .content .text {
-    margin-top: 5.5%;
+    margin-top: 4%;
+  }
+  .order .container .content form {
+    margin-top: 3.5%;
+  }
+  .order .container .content form input {
+    width: 87%;
+  }
+  .order .container .content form input:not(:first-child) {
+    margin-top: 3.5%;
+  }
+  .order .container .content form button {
+    padding: 2.5% 39%;
+  }
+}
+
+@media (max-width: 813px) and (orientation: landscape), (max-width: 425px) {
+  .order .container .content {
+    max-width: 469px;
+  }
+  .order .container .content h3 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+  .order .container .content .text {
+    font-size: 0.93rem;
+    line-height: 1.125rem;
+  }
+  .order .container .content form input {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    padding-top: 21px;
+    padding-bottom: 20px;
   }
 }
 
