@@ -17,7 +17,8 @@ main .registration {
 }
 
 main .leftContent {
-  background: url(/assets/manPhoto.png) 100% 100% no-repeat;
+  min-height: 100vh;
+  background: url(/assets/manPhoto.png) 100% 0 no-repeat;
 }
 
 main .leftContent img {
@@ -26,6 +27,7 @@ main .leftContent img {
 }
 
 main .rightContent {
+  min-height: 100vh;
   background: #168346;
 }
 
@@ -168,7 +170,7 @@ main .bottom-text {
           align-items: center;
 }
 
-.order .container .content form input {
+.order .container .content form .input {
   width: 84%;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -179,14 +181,14 @@ main .bottom-text {
   color: #666666;
 }
 
-.order .container .content form input:not(:first-child) {
+.order .container .content form .input:not(:first-child) {
   margin-top: 2.6%;
 }
 
 .order .container .content form button {
   cursor: pointer;
   margin-top: 4%;
-  padding: 2.5% 38.7%;
+  padding: 2.5% 38.3%;
   font-weight: 700;
   background: #183E28;
   border: none;
@@ -202,9 +204,26 @@ main .bottom-text {
   text-align: center;
 }
 
+.none {
+  display: none;
+}
+
+.input-value {
+  max-width: 72%;
+  margin-left: 5%;
+  margin-top: 8px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+  opacity: 0.6;
+}
+
 @media (max-width: 1400px) {
   main .leftContent {
-    background: url(/assets/manPhoto.png) 58% 99% no-repeat;
+    background: url(/assets/manPhoto.png) 62% 17% no-repeat;
     background-size: 104%;
   }
   main .rightContent .container {
@@ -251,11 +270,16 @@ main .bottom-text {
   main .registration {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    -ms-grid-rows: 24.5vh calc(100vh - 24.5vh);
+        grid-template-rows: 24.5vh calc(100vh - 24.5vh);
   }
   main .leftContent {
     background: url(/assets/manPhoto.png) 50% 100% no-repeat;
-    height: 22.5vh;
-    background-size: 26%;
+    min-height: auto;
+    background-size: 31%;
+  }
+  main .rightContent {
+    min-height: auto;
   }
   main .rightContent h3 {
     margin-top: 4.5%;
@@ -266,6 +290,12 @@ main .bottom-text {
     font-size: 0.93rem;
   }
   main .rightContent .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 5%;
+        grid-template-rows: 1fr 5%;
+  }
+  main .rightContent .cover {
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -280,6 +310,7 @@ main .bottom-text {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-bottom: 18%;
   }
   main .rightContent form {
     margin-top: 2%;
@@ -297,7 +328,7 @@ main .bottom-text {
     font-size: 1rem;
   }
   main .bottom-text {
-    margin-top: 7.5%;
+    margin: 0 auto;
   }
   .order .container .content {
     max-width: 653px;
@@ -313,10 +344,10 @@ main .bottom-text {
   .order .container .content form {
     margin-top: 3.5%;
   }
-  .order .container .content form input {
+  .order .container .content form .input {
     width: 87%;
   }
-  .order .container .content form input:not(:first-child) {
+  .order .container .content form .input:not(:first-child) {
     margin-top: 3.5%;
   }
   .order .container .content form button {
@@ -325,22 +356,43 @@ main .bottom-text {
 }
 
 @media (max-width: 813px) and (orientation: landscape), (max-width: 425px) {
+  main .rightContent .cover {
+    padding-bottom: 3%;
+  }
+  .order .container {
+    max-width: 580px;
+  }
   .order .container .content {
     max-width: 469px;
   }
   .order .container .content h3 {
+    text-align: center;
+    padding-top: 7%;
+    margin: 0 auto;
+    max-width: 76%;
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
   .order .container .content .text {
+    text-align: center;
+    margin-top: 3%;
     font-size: 0.93rem;
     line-height: 1.125rem;
   }
-  .order .container .content form input {
+  .order .container .content form .input {
+    width: 61%;
     font-size: 0.75rem;
     line-height: 0.875rem;
     padding-top: 21px;
     padding-bottom: 20px;
+  }
+  .order .container .content form button {
+    padding: 5.5% 24.5%;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .order .container .content .bottom-text-page2 {
+    margin-bottom: 0;
   }
 }
 
@@ -349,7 +401,7 @@ main .bottom-text {
     height: 24vh;
     background-size: 56%;
   }
-  main .rightContent .container {
+  main .rightContent .cover {
     margin: 0 auto;
   }
   main .rightContent h3 {
@@ -386,8 +438,35 @@ main .bottom-text {
   main .bottom-text {
     max-width: 75%;
     font-size: 0.75rem;
-    margin-top: 21%;
-    margin-bottom: 8%;
+  }
+  .input-value {
+    max-width: 83%;
+  }
+  .order .container {
+    -ms-grid-rows: 1fr 5%;
+        grid-template-rows: 1fr 5%;
+  }
+  .order .container .content h3 {
+    max-width: 82%;
+    padding-top: 9%;
+  }
+  .order .container .content .bottom {
+    padding-top: 3%;
+    margin: 0 auto;
+    max-width: 85%;
+  }
+  .order .container .content form {
+    margin-top: 9.5%;
+  }
+  .order .container .content form .input {
+    width: 77%;
+  }
+  .order .container .content form button {
+    margin-top: 3%;
+    padding: 6.5% 30.5%;
+  }
+  .order .container .bottom-text-page2 {
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */

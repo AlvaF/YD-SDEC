@@ -15,7 +15,8 @@ main {
     }
 
     .leftContent {
-        background: url(/assets/manPhoto.png) 100% 100% no-repeat;
+        min-height: 100vh;
+        background: url(/assets/manPhoto.png) 100% 0 no-repeat;
 
         img {
             width: 75%;
@@ -26,6 +27,7 @@ main {
     }
 
     .rightContent {
+        min-height: 100vh;
         background: #168346;
 
         h3 {
@@ -148,7 +150,7 @@ main {
                 flex-direction: column;
                 align-items: center;
 
-                input {
+                .input {
                     width: 84%;
                     padding-top: 18px;
                     padding-bottom: 18px;
@@ -166,7 +168,7 @@ main {
                 button {
                     cursor: pointer;
                     margin-top: 4%;
-                    padding: 2.5% 38.7%;
+                    padding: 2.5% 38.3%;
                     font-weight: 700;
                     background: #183E28;
                     border: none;
@@ -188,10 +190,27 @@ main {
     }
 }
 
+.none {
+    display: none;
+}
+
+.input-value {
+    max-width: 72%;
+    margin-left: 5%;
+    margin-top: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    opacity: 0.6;
+}
+
 @media (max-width:1400px) {
     main {
         .leftContent {
-            background: url(/assets/manPhoto.png) 58% 99% no-repeat;
+            background: url(/assets/manPhoto.png) 62% 17% no-repeat;
             background-size: 104%;
         }
 
@@ -259,15 +278,18 @@ main {
     main {
         .registration {
             grid-template-columns: 1fr;
+            grid-template-rows: 24.5vh calc(100vh - 24.5vh);
         }
 
         .leftContent {
             background: url(/assets/manPhoto.png) 50% 100% no-repeat;
-            height: 22.5vh;
-            background-size: 26%;
+            min-height: auto;
+            background-size: 31%;
         }
 
         .rightContent {
+            min-height: auto;
+
             h3 {
                 margin-top: 4.5%;
             }
@@ -279,11 +301,17 @@ main {
             }
 
             .container {
+                display: grid;
+                grid-template-rows: 1fr 5%;
+            }
+
+            .cover {
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                padding-bottom: 18%;
             }
 
             form {
@@ -309,7 +337,7 @@ main {
         }
 
         .bottom-text {
-            margin-top: 7.5%;
+            margin: 0 auto;
         }
     }
 
@@ -331,7 +359,7 @@ main {
                 form {
                     margin-top: 3.5%;
 
-                    input {
+                    .input {
                         width: 87%;
 
                         &:not(:first-child) {
@@ -351,28 +379,55 @@ main {
 
 @media(max-width:813px) and (orientation: landscape),
 (max-width:425px) {
+    main {
+        .rightContent {
+            .cover {
+                padding-bottom: 3%;
+            }
+        }
+    }
+
     .order {
         .container {
+            max-width: 580px;
+
             .content {
                 max-width: 469px;
 
                 h3 {
+                    text-align: center;
+                    padding-top: 7%;
+                    margin: 0 auto;
+                    max-width: 76%;
                     font-size: 1.375rem;
                     line-height: 1.625rem;
                 }
 
                 .text {
+                    text-align: center;
+                    margin-top: 3%;
                     font-size: 0.93rem;
                     line-height: 1.125rem;
                 }
 
                 form {
-                    input {
+                    .input {
+                        width: 61%;
                         font-size: 0.75rem;
                         line-height: 0.875rem;
                         padding-top: 21px;
                         padding-bottom: 20px;
                     }
+
+                    button {
+                        padding: 5.5% 24.5%;
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+
+                .bottom-text-page2 {
+                    margin-bottom: 0;
                 }
             }
         }
@@ -387,7 +442,7 @@ main {
         }
 
         .rightContent {
-            .container {
+            .cover {
                 margin: 0 auto;
             }
 
@@ -433,8 +488,46 @@ main {
         .bottom-text {
             max-width: 75%;
             font-size: 0.75rem;
-            margin-top: 21%;
-            margin-bottom: 8%;
+        }
+    }
+
+    .input-value {
+        max-width: 83%;
+    }
+
+    .order {
+        .container {
+            grid-template-rows: 1fr 5%;
+
+            .content {
+                h3 {
+                    max-width: 82%;
+                    padding-top: 9%;
+                }
+
+                .bottom {
+                    padding-top: 3%;
+                    margin: 0 auto;
+                    max-width: 85%;
+                }
+
+                form {
+                    margin-top: 9.5%;
+
+                    .input {
+                        width: 77%;
+                    }
+
+                    button {
+                        margin-top: 3%;
+                        padding: 6.5% 30.5%;
+                    }
+                }
+            }
+
+            .bottom-text-page2 {
+                margin: 0 auto;
+            }
         }
     }
 }

@@ -1,6 +1,5 @@
-console.log(screen.orientation.type);
-        console.log(window.innerWidth);
-        if (screen.orientation.type === "landscape-primary" && window.innerWidth <= 812) {
-            console.log(true);
-            document.querySelector('#changingValue').value = '+7 (ХХХ) ХХХ-ХХ-ХХ';
-        }
+// Отслеживание альбомной ориентации у мобильных телефонов, изменение значения placeholder
+if (screen.orientation.type === "landscape-primary" && window.innerWidth <= 813 || window.innerWidth <= 380) {
+    document.querySelector('#changingValue').placeholder = '+7 (ХХХ) ХХХ-ХХ-ХХ';
+    document.querySelector('.input-value').classList.remove('none');
+}
