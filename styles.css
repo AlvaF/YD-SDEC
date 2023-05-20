@@ -185,6 +185,10 @@ main .bottom-text {
   margin-top: 2.6%;
 }
 
+.order .container .content form textarea {
+  resize: none;
+}
+
 .order .container .content form button {
   cursor: pointer;
   margin-top: 4%;
@@ -282,7 +286,7 @@ main .bottom-text {
     min-height: auto;
   }
   main .rightContent h3 {
-    margin-top: 4.5%;
+    margin-top: 6.5%;
   }
   main .rightContent .text {
     margin-top: 2.5%;
@@ -290,6 +294,7 @@ main .bottom-text {
     font-size: 0.93rem;
   }
   main .rightContent .container {
+    margin: 0 auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 1fr 5%;
@@ -310,11 +315,14 @@ main .bottom-text {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-bottom: 18%;
+    padding-bottom: 11%;
   }
   main .rightContent form {
     margin-top: 2%;
     width: 58.5%;
+  }
+  main .rightContent form input {
+    font-size: 0.875rem;
   }
   main .rightContent form input:not(:first-child) {
     margin-top: 3%;
@@ -328,6 +336,7 @@ main .bottom-text {
     font-size: 1rem;
   }
   main .bottom-text {
+    text-align: center;
     margin: 0 auto;
   }
   .order .container .content {
@@ -355,7 +364,7 @@ main .bottom-text {
   }
 }
 
-@media (max-width: 813px) and (orientation: landscape), (max-width: 425px) {
+@media (max-width: 813px) and (orientation: landscape), (max-width: 500px) {
   main .rightContent .cover {
     padding-bottom: 3%;
   }
@@ -396,13 +405,26 @@ main .bottom-text {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   main .leftContent {
-    height: 24vh;
+    background-size: 37%;
+  }
+  main .rightContent form button {
+    padding: 4.5% 27%;
+  }
+}
+
+@media (max-width: 425px) {
+  main .registration {
+    -ms-grid-rows: 22vh calc(100vh - 22vh);
+        grid-template-rows: 22vh calc(100vh - 22vh);
+  }
+  main .leftContent {
     background-size: 56%;
   }
   main .rightContent .cover {
     margin: 0 auto;
+    padding-bottom: 22%;
   }
   main .rightContent h3 {
     margin-top: 8.5%;
@@ -416,7 +438,7 @@ main .bottom-text {
   }
   main .rightContent form {
     margin-top: 5%;
-    width: 83.5%;
+    width: 84.5%;
   }
   main .rightContent form input {
     font-size: 0.9rem;
@@ -436,6 +458,7 @@ main .bottom-text {
     line-height: 1.125rem;
   }
   main .bottom-text {
+    text-align: center;
     max-width: 75%;
     font-size: 0.75rem;
   }
@@ -467,6 +490,12 @@ main .bottom-text {
   }
   .order .container .bottom-text-page2 {
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 320px) {
+  main .rightContent .cover {
+    padding-bottom: 7%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

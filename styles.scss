@@ -165,6 +165,10 @@ main {
                     }
                 }
 
+                textarea {
+                    resize: none;
+                }
+
                 button {
                     cursor: pointer;
                     margin-top: 4%;
@@ -291,7 +295,7 @@ main {
             min-height: auto;
 
             h3 {
-                margin-top: 4.5%;
+                margin-top: 6.5%;
             }
 
             .text {
@@ -301,6 +305,7 @@ main {
             }
 
             .container {
+                margin: 0 auto;
                 display: grid;
                 grid-template-rows: 1fr 5%;
             }
@@ -311,7 +316,7 @@ main {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding-bottom: 18%;
+                padding-bottom: 11%;
             }
 
             form {
@@ -319,6 +324,8 @@ main {
                 width: 58.5%;
 
                 input {
+                    font-size: 0.875rem;
+
                     &:not(:first-child) {
                         margin-top: 3%;
                     }
@@ -337,6 +344,7 @@ main {
         }
 
         .bottom-text {
+            text-align: center;
             margin: 0 auto;
         }
     }
@@ -378,7 +386,7 @@ main {
 }
 
 @media(max-width:813px) and (orientation: landscape),
-(max-width:425px) {
+(max-width:500px) {
     main {
         .rightContent {
             .cover {
@@ -434,16 +442,36 @@ main {
     }
 }
 
-@media(max-width:375px) {
+@media(max-width:700px) {
     main {
         .leftContent {
-            height: 24vh;
+            background-size: 37%;
+        }
+
+        .rightContent {
+            form {
+                button {
+                    padding: 4.5% 27%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:425px) {
+    main {
+        .registration {
+            grid-template-rows: 22vh calc(100vh - 22vh);
+        }
+
+        .leftContent {
             background-size: 56%;
         }
 
         .rightContent {
             .cover {
                 margin: 0 auto;
+                padding-bottom: 22%;
             }
 
             h3 {
@@ -460,7 +488,7 @@ main {
 
             form {
                 margin-top: 5%;
-                width: 83.5%;
+                width: 84.5%;
 
                 input {
                     font-size: 0.9rem;
@@ -486,6 +514,7 @@ main {
         }
 
         .bottom-text {
+            text-align: center;
             max-width: 75%;
             font-size: 0.75rem;
         }
@@ -527,6 +556,16 @@ main {
 
             .bottom-text-page2 {
                 margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media(max-width:320px) {
+    main {
+        .rightContent {
+            .cover {
+                padding-bottom: 7%;
             }
         }
     }
